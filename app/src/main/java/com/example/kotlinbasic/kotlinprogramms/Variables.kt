@@ -1,7 +1,7 @@
 package com.example.kotlinbasic.kotlinprogramms
 
 fun main() {
-    var score = 5
-    score=20
+    val score = 5
+    score=20     //giving error val can not not be reassigned
     print(score)
 }
