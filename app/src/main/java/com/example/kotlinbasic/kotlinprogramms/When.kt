@@ -19,4 +19,17 @@ fun main() {
     }
     print(result)
     output:Animal is Dog*/
+
+    //When with Range<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+/*    val number = 61
+    val result = when(number){
+        in 1..9 -> "Child age"
+        in 10..19->"Teen age"
+        in 20..60-> "Young age"
+        else ->"Near Death Age"
+    }
+    print(result)
+
+    output:Near Death Age*/
 }
