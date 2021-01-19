@@ -34,5 +34,29 @@ var y =10
 
     output:Even Number*/
 
+/*//Kotlin if-else if-else Ladder Expression<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
+    val num1 = 30
+    val num2 = 20
+    val num3 = 30
+    var max=""
+
+    val result = if(num1>num2){
+        "num1 greater than numbr2"
+         max = if(num1>num3){
+
+            "num1 greater than numbr3"
+        } else{
+            "num1 not greater than numb3"
+        }
+    } else{
+        "num1 not greater than numbr2"
+    }
+
+    println("result"+result)
+    println("max"+max)
+
+    output:resultkotlin.Unit
+    maxnum1 not greater than numb3*/
 }
+
