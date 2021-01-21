@@ -28,8 +28,8 @@ fun add(num1:Int,num2:Int) = num1+num2
     }
 }*/
 
-fun add(num1:Int){
+/*fun add(num1:Int){
     num1=20    // giving error:val can not be re assigned. parameter of fun are bydefault val.
-}
+}*/
 
 
