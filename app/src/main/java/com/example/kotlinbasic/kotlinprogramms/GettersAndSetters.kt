@@ -4,8 +4,10 @@ fun main() {
 
   var student2 = Student2("sanj kumar",23)
     println(student2.userName)
-
     student2.userMarks = 23
+
+    var result= Result()
+    println(result.marks)
 }
 
 
@@ -30,5 +32,14 @@ class Student2(name:String,marks:Int){
     get() = field
     set(value){
         field = value
+    }
+
+
+}
+
+class Result {
+    var marks:Int=23
+    get(){
+        return field+10
     }
 }
