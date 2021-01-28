@@ -3,6 +3,7 @@ package com.example.kotlinbasic.kotlinprogramms
 fun main() {
 
     var b = B()
+    var a = A()
     println(b.name)
     println(b.fname)
 }
