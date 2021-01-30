@@ -9,11 +9,12 @@ fun main() {
     var smartMobile = Samsung()
     smartMobile.callingDisplay()
     println(smartMobile.name)
+    println(smartMobile.toString())
 
 }
 
 
-open class Mobile(var type:String) {
+open class Mobile() {
    open var name:String ="Mobile"
    open fun callingDisplay() = println("Simple Display")
     fun sim2GType() =println("2 G Sim")
@@ -28,8 +29,11 @@ class Samsung:Mobile() {
         super.sim2GType()
         this.sim4GType()
     }
-
     fun sim4GType() = println("4 G Sim")
+
+    override fun toString(): String {
+        return "Sanjeev kumar"
+    }
 
 
 }
