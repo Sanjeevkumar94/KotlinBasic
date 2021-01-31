@@ -32,7 +32,7 @@ class ConstructorOverLoading(var name:String="",var fname:String ="",var age:Int
     }
 
 
-    constructor(raavan:Int){
+    constructor(raavan:Int):this("dk","whw",45){
         println("dfggdfhfghfghgfhgf")
     }
 
