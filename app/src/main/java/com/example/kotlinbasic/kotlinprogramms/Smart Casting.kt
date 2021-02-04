@@ -2,7 +2,7 @@ package com.example.kotlinbasic.kotlinprogramms
 
 fun main() {
 
-    val circle = Circle()
+   /* val circle = Circle()
     val player = Player()
 
     val array:Array<Draggable> = arrayOf(circle,player)
@@ -11,6 +11,21 @@ fun main() {
             obj.sayCircleName()
         } else {
             (obj as Player).sayPlayerName()
+        }
+    }
+
+    */
+
+    val samrala:Ludhiana = Samrala()
+    val mor:Ludhiana = Morinda()
+
+    val arrayCity:Array<Ludhiana> = arrayOf(samrala,mor)
+
+    for(obj in arrayCity){
+        if(obj is Samrala){
+            println(obj.cityNameSam())
+        } else {
+            println((obj as Morinda).cityNameMor())
         }
     }
 }
@@ -37,4 +52,17 @@ class Player() : Draggable {
         println("Sanjeev Kumar")
     }
 
+}
+
+
+open class Ludhiana {
+    fun cityNameLdh() = "Ludhiana"
+}
+
+class Samrala :Ludhiana(){
+    fun cityNameSam() = "Samrala"
+
+}
+class Morinda :Ludhiana(){
+    fun cityNameMor() = "Morinda"
 }
