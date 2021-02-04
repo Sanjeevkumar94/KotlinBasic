@@ -19,13 +19,19 @@ fun main() {
     val samrala:Ludhiana = Samrala()
     val mor:Ludhiana = Morinda()
 
-    val arrayCity:Array<Ludhiana> = arrayOf(samrala,mor)
-
+//    val arrayCity = arrayOf(samrala,mor)
+    val arrayCity = arrayOf(samrala,mor,Abc())
+  /*  // error Exception in thread "main" java.lang.ClassCastException: com.example.kotlinbasic.kotlinprogramms.Abc cannot be cast to com.example.kotlinbasic.kotlinprogramms.Morinda
+    at com.example.kotlinbasic.kotlinprogramms.Smart_CastingKt.main(Smart Casting.kt:28)
+    at com.example.kotlinbasic.kotlinprogramms.Smart_CastingKt.main(Smart Casting.kt)
+*/
     for(obj in arrayCity){
         if(obj is Samrala){
             println(obj.cityNameSam())
-        } else {
+        } else if(obj is Morinda) {
             println((obj as Morinda).cityNameMor())
+        } else{
+            (obj as Abc).abcHello()
         }
     }
 }
@@ -65,4 +71,11 @@ class Samrala :Ludhiana(){
 }
 class Morinda :Ludhiana(){
     fun cityNameMor() = "Morinda"
+}
+
+class Abc {
+
+    fun abcHello(){
+        println("ABC Hello")
+    }
 }
