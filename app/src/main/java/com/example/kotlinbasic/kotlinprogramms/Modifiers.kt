@@ -37,3 +37,11 @@ A private modifier allows the declaration to be accessible only within the block
 
 internal modifier
 The internal modifiers are newly added in Kotlin, it is not available in Java. Declaring anything makes that field marked as internal field. The internal modifier makes the field visible only inside the module in which it is implemented.*/
+
+
+/*
+Modifiers     Top Level declaration           Class members
+ public         Everywhere                     Everywhere
+ internal       within a module                 within a module
+ private        within a file                   within a class
+ protected        N/A                            Sub classes*/
