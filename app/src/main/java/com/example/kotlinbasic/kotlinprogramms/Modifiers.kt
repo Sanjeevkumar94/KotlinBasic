@@ -14,9 +14,46 @@ class Banga2 {
 class Banga3:Banga(){
     fun showValue() = c
     override var d: Int = 9   // it is also protected
+ fun privateTopAccess() {
+     gn()
+     b
+ }
 
 }
 
+
+fun main() {
+    var banga4 = Banga4()
+    println(b)
+    gn()
+    //all are accessable because top level Private are accessable in sane file.
+}
+
+// Top level Delcaration
+
+private class Banga4 {
+}
+private var b =20
+private fun gn() {
+println("Hello")
+}
+
+internal class Banga5 {
+}
+private var b2 =20
+internal fun gn2() {
+println("Hello")
+}
+
+public class Banga6 {
+}
+public var b6 =20
+public fun gn6() {
+println("Hello")
+}
+/*protectd class Sanj {        //error protectd not allowed on top level
+
+}*/
 
 
 

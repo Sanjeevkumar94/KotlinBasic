@@ -3,7 +3,7 @@ package com.example.kotlinbasic.kotlinprogramms
 fun main(){
     val banga = Banga()
     println(banga.a)
-//    banga.c       // can not access because protected
+//    banga.c       // can not access because protected only sub class can access
 
     println(banga.add())
 
