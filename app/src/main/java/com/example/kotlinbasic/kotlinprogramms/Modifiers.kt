@@ -11,7 +11,7 @@ class Banga2 {
     private var b:Int =2
 }
 
-class Banga3:Banga(){
+open class Banga3:Banga(){
     fun showValue() = c
     override var d: Int = 9   // it is also protected
  fun privateTopAccess() {
@@ -21,12 +21,19 @@ class Banga3:Banga(){
 
 }
 
+class Bangga:Banga3(){
+    fun bangg() = d
+}
 
 fun main() {
     var banga4 = Banga4()
     println(b)
     gn()
     //all are accessable because top level Private are accessable in sane file.
+
+    var b = Bangga()
+    println(b.bangg())
+
 }
 
 // Top level Delcaration
