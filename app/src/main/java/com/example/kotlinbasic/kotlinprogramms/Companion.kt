@@ -9,7 +9,8 @@ MyClass.show()
 
 
 class MyClass{
-    companion object MyObject {
+
+    companion object  {
         var a = 0
         fun show(){
             println(++a)
