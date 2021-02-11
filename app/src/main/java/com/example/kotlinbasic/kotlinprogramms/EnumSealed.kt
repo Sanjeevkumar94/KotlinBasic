@@ -115,7 +115,8 @@ enum class WhenEx{
         fun SelectDay(obj: WhenEx): String {
             return (when (obj) {
                 SUNDAY -> "Roday is Sunday"
-                MONDAY -> "Roday is MONDAY"
+                MONDAY -> {"Roday is MONDAY"
+                            "Today is Monday" }
                 TUESDAY -> "Roday is TUESDAY"
                 WEDNESDAY -> "Roday is WEDNESDAY"
                 THURSDAY -> "Roday is THURSDAY"
