@@ -3,6 +3,7 @@ package com.example.kotlinbasic.kotlinprogramms
 fun main() {
 
     var day = Day.SATURDAY
+    var mDay = Day.MONDAY
 /*    println(Day.FRIDAY)
     println(day.number)
     println(day.printDay())
@@ -15,8 +16,10 @@ fun main() {
 
     /*println(day.name)
     println(day.ordinal)*/
-    println(day.printDay())
-    println(Day.getAlldays())
+/*    println(day.printDay())
+    println(Day.getAlldays())*/
+    println(day.printlParticularName(day))
+    println(mDay.printlParticularName(day))
    /* for (obj in Day.values()){
         println("${obj.name} is weekend ${obj.isWeekend}")
     }*/
@@ -37,6 +40,18 @@ enum class Day(var number:Int,var isWeekend:Boolean=false){
         for (obj in Day.values()) {
             println("${obj} is weekend ${obj.isWeekend}")
         }
+    }
+
+    fun printlParticularName(obj:Day){
+        println(obj.name)
+        println(obj.ordinal)
+        println(obj.isWeekend)
+
+        println(this.name)
+        println(this.ordinal)
+        println(this.isWeekend)
+
+
     }
 
     companion object {
