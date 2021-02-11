@@ -3,7 +3,7 @@ package com.example.kotlinbasic.kotlinprogramms
 fun main() {
 
     var day = Day.SATURDAY
-    println(Day.FRIDAY)
+/*    println(Day.FRIDAY)
     println(day.number)
     println(day.printDay())
     println(Day.MONDAY.printDay())
@@ -11,23 +11,44 @@ fun main() {
     for(i in Day.values()){
         println(i)
         println(i.number)
-    }
+    }*/
+
+    /*println(day.name)
+    println(day.ordinal)*/
+    println(day.printDay())
+    println(Day.getAlldays())
+   /* for (obj in Day.values()){
+        println("${obj.name} is weekend ${obj.isWeekend}")
+    }*/
 }
 
 
-enum class Day(var number:Int){
+enum class Day(var number:Int,var isWeekend:Boolean=false){
     MONDAY(1),            //monday,tuesday all are objects.
     TUESDAY(2),
     WEDNESDAY(3),
     THURSDAY(4),
     FRIDAY(5),
-    SATURDAY(6),
-    SUNDAY(7);
+    SATURDAY(6,true),
+    SUNDAY(7,true);
 
     fun printDay(){
-        println("Day is $this")
+        println("Day is ${this.isWeekend}")
+        for (obj in Day.values()) {
+            println("${obj} is weekend ${obj.isWeekend}")
+        }
+    }
+
+    companion object {
+        fun getAlldays() {
+            for (obj in Day.values()) {
+                println("${obj.name} is weekend ${obj.isWeekend}")
+            }
+        }
     }
 }
+
+
 
 
 
@@ -42,3 +63,9 @@ Enum constants aren’t just mere collections of constants- these have propertie
 Each of the enum constants acts as separate instances of the class and separated by commas.
 Enums increases readability of your code by assigning pre-defined names to constants.
 An instance of enum class cannot be created using constructors.*/
+
+/*
+
+enum vs Sealed
+        enum mein ek value ek instaite hota hai jo ek baar ban gaya vo ban gaya
+*/
