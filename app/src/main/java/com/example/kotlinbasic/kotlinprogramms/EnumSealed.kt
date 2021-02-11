@@ -110,7 +110,6 @@ enum class WhenEx{
     FRIDAY,
     SATURDAY;
 
-
     companion object {
         fun SelectDay(obj: WhenEx): String {
             return (when (obj) {
@@ -147,4 +146,7 @@ An instance of enum class cannot be created using constructors.*/
 
 enum vs Sealed
         enum mein ek value ek instaite hota hai jo ek baar ban gaya vo ban gaya
+        enu, mein hum value ko restrict krte ho aur sealed mein type ko restrict krte hai
+        enum mein set of values hoti hai aur sealed mein set of types hoti hai
+        enum mein ek hi object banta hai aur sealed mein mutiple
 */
