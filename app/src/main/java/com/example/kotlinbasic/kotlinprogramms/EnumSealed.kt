@@ -18,11 +18,19 @@ fun main() {
     println(day.ordinal)*/
 /*    println(day.printDay())
     println(Day.getAlldays())*/
-    println(day.printlParticularName(day))
-    println(mDay.printlParticularName(day))
+/*    println(day.printlParticularName(day))
+    println(mDay.printlParticularName(day))*/
    /* for (obj in Day.values()){
         println("${obj.name} is weekend ${obj.isWeekend}")
     }*/
+
+/*
+    Seasons.Winter.foo()
+*/
+
+
+
+  println(WhenEx.SelectDay(WhenEx.MONDAY))
 }
 
 
@@ -63,6 +71,61 @@ enum class Day(var number:Int,var isWeekend:Boolean=false){
     }
 }
 
+/*Enums as Anonymous Classes –
+Enum constants also behaves as anonymous classes by implementing their own functions along with overriding the abstract functions of the class. The most important thing is that each enum constant must be override.*/
+
+enum class Seasons(var weather:String){
+
+    Summer("hot") {
+        override fun foo() {
+            println("Hot days of a year")
+        }
+    },
+    Winter("cold") {
+        override fun foo() {
+            println("Cold days of a year")
+        }
+    },
+    Rainy("moderate") {
+        override fun foo() {
+            println("Rainy days of a year")
+        }
+    };
+
+    abstract fun foo()
+}
+
+/*
+Usage of when expression with enum class –
+A great advantage of enum classes in Kotlin comes into play when they are combined with the when expression. The advantage is since enum classes restrict the value a type can take, so when used with the when expression and the definition for all the constants are provided, then the need of the else clause is completely eliminated. In fact, doing so will generate a warning from the compiler.*/
+
+
+
+enum class WhenEx{
+    SUNDAY,
+    MONDAY,
+    TUESDAY,
+    WEDNESDAY,
+    THURSDAY,
+    FRIDAY,
+    SATURDAY;
+
+
+    companion object {
+        fun SelectDay(obj: WhenEx): String {
+            return (when (obj) {
+                SUNDAY -> "Roday is Sunday"
+                MONDAY -> "Roday is MONDAY"
+                TUESDAY -> "Roday is TUESDAY"
+                WEDNESDAY -> "Roday is WEDNESDAY"
+                THURSDAY -> "Roday is THURSDAY"
+                FRIDAY -> "Roday is FRIDAY"
+                SATURDAY -> "Roday is SATURDAY"
+
+            })
+        }
+    }
+}
 
 
 
