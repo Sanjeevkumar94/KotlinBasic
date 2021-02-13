@@ -43,7 +43,7 @@ fun main() {
 
     println("other code")*/
 
-    var age =12
+   /* var age =12
 try {
 
     if (age < 18) {
@@ -56,13 +56,33 @@ try {
     println(e.message)
 }
 
-    println("code running still")
+    println("code running still")*/
 
+
+
+    println(getNumber(""))
 }
 
 class MyException(message:String):Exception(message)
 class MyException2:Exception{
     constructor(message: String):super(message){
         println("it is basic error $message")
+    }
+}
+
+/*
+
+Kotlin try block as an Expression
+We can use try block as an expression which returns a value. The value returned by try expression is either the last expression of try block or the last expression of catch. Contents of the finally block do not affect the result of the expression.
+
+Kotlin try as an expression example
+Let's see an example of try-catch block as an expression which returns a value. In this example String value to Int which does not generate any exception and returns last statement of try block.*/
+
+
+fun getNumber(number:String):Int{
+    return try {
+        Integer.parseInt(number)
+    } catch (e:Exception){
+        0
     }
 }
