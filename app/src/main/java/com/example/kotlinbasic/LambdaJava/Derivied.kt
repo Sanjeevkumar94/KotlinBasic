@@ -1,4 +1,4 @@
-package com.example.kotlinbasic.Der
+package com.example.kotlinbasic.LambdaJava
 
 import com.example.kotlinbasic.kotlinprogramms.Banga
 
