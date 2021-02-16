@@ -28,15 +28,15 @@ fun main() {
     sayHi2("Hi Sanj")
 */
 
-    calculator(10,20,{x,y->x+y}) // with lambda
-    calculator(20,40,::sum2) // withFunction Type
+    calculator2(10,20,{x,y->x+y}) // with lambda
+    calculator2(20,40,::sum2) // withFunction Type
     val fn: (a: Int, b: Int) -> Int = ::sum2 // assign function in variable
-    calculator(20,40,fn) // withFunction Type
+    calculator2(20,40,fn) // withFunction Type
 }
 fun sum2 (a:Int,b:Int):Int{
     return a+b
 }
 
-fun calculator(a:Int,b:Int,fn:(Int,Int)->Int){
+fun calculator2(a:Int,b:Int,fn:(Int,Int)->Int){
     println(fn(a,b))
 }
