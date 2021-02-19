@@ -41,10 +41,11 @@ fun main() {
 
 
     val names = mutableListOf<String>()
-    paidUser.mapTo(names) {
+   val returnNames =  paidUser.mapTo(names) {
         it.name
     }
 
+    println(returnNames)
     println(names)
 
 }
