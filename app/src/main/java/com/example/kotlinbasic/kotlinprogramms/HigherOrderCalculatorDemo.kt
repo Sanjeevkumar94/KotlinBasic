@@ -19,3 +19,7 @@ fun calculator(a:Int,b:Int,operation:String,fn:(Int,Int,String)->Int){
 }
 
 
+fun checkInternet(retry:()->Unit){
+}
+
+
