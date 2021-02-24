@@ -7,9 +7,10 @@ fun main() {
     bus addMoreBus "PRTC"
 }
 
-infix fun Buses.addMoreBus(busType:String){
+infix fun Buses.addMoreBus(busType:String):String{
     busTypes.add(busType)
     busTypes.forEach { println(it) }
+    return "Hi"
 }
 
 class Buses(firstBus:String){
